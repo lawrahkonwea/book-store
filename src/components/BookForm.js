@@ -3,7 +3,6 @@ import React from 'react';
 const BookForm = () => {
   const title = 'ADD NEW BOOK';
   return (
-    <div>
       <section>
         <h2>{title}</h2>
         <form>
@@ -12,7 +11,6 @@ const BookForm = () => {
           <button type="submit">ADD BOOK</button>
         </form>
       </section>
-    </div>
   );
 };
 
