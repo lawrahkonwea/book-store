@@ -56,7 +56,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
 
 - Add a book to the list
 - Delete a selected book from the list
@@ -84,42 +83,42 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-<!--
-git clone https://github.com/lawrahkonwea/book-store
+```sh
+  git clone https://github.com/lawrahkonwea/book-store
   cd book-store
---->
+```
 
 ### Install
 
 Install this project with:
 
-<!--
-npm install
---->
+```sh
+  npm install
+```
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-npm start
---->
+```sh
+  npm start
+```
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-npm run test
---->
+```sh
+  npm run test
+```
 
 ### Deployment
 
 You can deploy this project using:
 
-<!--
-You can deploy this project using <a>Github Pages</a>
- -->
+ ```sh
+  You can deploy this project using <a>Github Pages</a>
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
