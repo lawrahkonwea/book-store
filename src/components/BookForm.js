@@ -1,15 +1,19 @@
-import React from "react";
+import React from 'react';
 
-const BookForm= () => {
-  <section>
-    <h2>ADD NEW BOOK</h2>
-  <form>
-    <input type="text" placeholder="Add title" className="input-text" name="title" />
-    <input type="text" placeholder="Add author" className="input-text" name="author" />
-    <button type="submit">ADD BOOK</button>
-  </form>
-  </section>
-
-}
+const BookForm = () => {
+  const title = 'ADD NEW BOOK';
+  return (
+    <div>
+      <section>
+        <h2>{title}</h2>
+        <form>
+          <input type="text" placeholder="Add title" className="input-text" name="title" />
+          <input type="text" placeholder="Add author" className="input-text" name="author" />
+          <button type="submit">ADD BOOK</button>
+        </form>
+      </section>
+    </div>
+  );
+};
 
 export default BookForm;
