@@ -1,43 +1,23 @@
 import React from 'react';
-import { v4 as uuid4 } from 'uuid';
+import { useSelector } from 'react-redux';
 import ContentBook from './ContentBook';
 import BookForm from './BookForm';
 
 const BookList = () => {
-  const books = [
-    {
-      title: 'things fall apart',
-      author: 'Chinua Achebe',
-      completed: true,
-      id: uuid4(),
-    },
-    {
-      title: 'things fall apart',
-      author: 'Chinua Achebe',
-      completed: true,
-      id: uuid4(),
-    },
-    {
-      title: 'things fall apart',
-      author: 'Chinua Achebe',
-      completed: true,
-      id: uuid4(),
-    },
-  ];
+  const books = useSelector((state) => state.books);
 
   return (
     <div>
       <ul>
         {books.map((book) => (
           <ContentBook
-            title={book.title}
-            author={book.author}
+            book={book}
             key={book.id}
           />
         ))}
       </ul>
       <BookForm />
-      </div>
+    </div>
   );
 };
 

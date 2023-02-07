@@ -1,36 +1,47 @@
-// define the action type
-const ADD_BOOKS = 'bookstore/books/ADD_BOOKS';
-const REMOVE_BOOKS = 'bookstore/books/REMOVE_BOOKS';
+import { createSlice } from '@reduxjs/toolkit';
+import { v4 as uuid4 } from 'uuid';
 
-// initial state
-const initialState = { books: [] };
+const initialState = [
+  {
+    title: 'things fall apart',
+    author: 'Chinua Achebe',
+    id: uuid4(),
+  },
+  {
+    title: 'things fall apart',
+    author: 'Chinua Achebe',
+    id: uuid4(),
+  },
+  {
+    title: 'things fall apart',
+    author: 'Chinua Achebe',
+    id: uuid4(),
+  },
+];
 
-//  the action type to define the action creator
-
-export const addBookAction = (newBook) => (
-  { type: ADD_BOOKS, newBook }
-);
-export const removeBookAction = (id) => (
-  { type: REMOVE_BOOKS, id }
-);
-
-// Reducer
-const booksReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case ADD_BOOKS:
-      return {
-        ...state,
-        books: [...state.books, action.newBook],
-      };
-
-      case REMOVE_BOOKS:
-        return {
-          ...state,
-          books: [...state.filter((book) => book.id !== action.id)],
+const bookSlice = createSlice({
+  name: 'books',
+  initialState,
+  reducer: {
+    addBookAction(state, action) {
+      if (action.payload.title && action.payload.author) {
+        const newBook = {
+          title: action.payload.title,
+          author: action.payload.author,
+          id: uuid4(),
         };
-    default:
+        return [...state, newBook];
+      }
       return state;
-  }
-};
+    },
+    removeBookAction(state, action) {
+      if (action.payload) {
+        return state.filter((book) => book.id !== action.payload);
+      }
+      return state;
+    },
+  },
+});
 
-export default booksReducer;
+export default bookSlice.reducer;
+export const { addBookAction, removeBookAction } = bookSlice.actions;
