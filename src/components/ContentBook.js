@@ -19,8 +19,11 @@ const ContentBook = ({ book }) => {
   );
 };
 ContentBook.propTypes = {
-  /*eslint-disable */ 
-  book: PropTypes.object.isRequired, 
+  book: PropTypes.shape({
+    title: PropTypes.string,
+    author: PropTypes.string,
+    id: PropTypes.string,
+  }).isRequired,
 };
 
 export default ContentBook;
