@@ -13,7 +13,7 @@ const CategoryPage = () => {
   return (
     <div>
       <h1>{categories}</h1>
-      <button type="submit" className="status-btn" onClick={handleSubmit}>Check Status</button>
+      <button type="submit" className="status-button" onClick={handleSubmit}>Check Status</button>
     </div>
   );
 };
