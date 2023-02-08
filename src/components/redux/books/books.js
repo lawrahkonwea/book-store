@@ -22,8 +22,8 @@ const initialState = [
 const bookSlice = createSlice({
   name: 'books',
   initialState,
-  reducer: {
-    addBookAction(state, action) {
+  reducers: {
+    addBookAction: (state, action) => {
       if (action.payload.title && action.payload.author) {
         const newBook = {
           title: action.payload.title,
@@ -34,7 +34,7 @@ const bookSlice = createSlice({
       }
       return state;
     },
-    removeBookAction(state, action) {
+    removeBookAction: (state, action) => {
       if (action.payload) {
         return state.filter((book) => book.id !== action.payload);
       }
