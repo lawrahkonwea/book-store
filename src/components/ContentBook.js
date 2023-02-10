@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBookAction } from './redux/books/books';
+import { removeBook } from './redux/books/books';
 
 const ContentBook = ({ book }) => {
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(removeBookAction(book.item_id));
+    dispatch(removeBook(book.item_id));
   };
 
   return (

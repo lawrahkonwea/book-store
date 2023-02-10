@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { v4 as uuid4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import { addBookAction } from './redux/books/books';
+import { addBook } from './redux/books/books';
 
 const BookForm = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 
-  const addBook = (e) => {
+  const addBookk = (e) => {
     e.preventDefault();
     if (title.trim() || author.trim()) {
       const payload = {
@@ -18,7 +18,7 @@ const BookForm = () => {
         category: 'fiction',
 
       };
-      dispatch(addBookAction(payload));
+      dispatch(addBook(payload));
     }
     setTitle('');
     setAuthor('');
@@ -27,7 +27,7 @@ const BookForm = () => {
   return (
     <section>
       <h2>ADD NEW BOOK</h2>
-      <form onSubmit={addBook}>
+      <form onSubmit={addBookk}>
         <input type="text" placeholder="Add title" className="input-text" name="title" onChange={(e) => setTitle(e.target.value)} value={title} required />
         <input type="text" placeholder="Add author" className="input-text" name="author" onChange={(e) => setAuthor(e.target.value)} value={author} required />
         <button type="submit">ADD BOOK</button>
