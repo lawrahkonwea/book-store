@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { v4 as uuid4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { addBookAction } from './redux/books/books';
 
@@ -10,7 +11,14 @@ const BookForm = () => {
   const addBook = (e) => {
     e.preventDefault();
     if (title.trim() || author.trim()) {
-      dispatch(addBookAction({ title, author }));
+      const payload = {
+        item_id: uuid4(),
+        title,
+        author,
+        category: 'fiction',
+
+      };
+      dispatch(addBookAction(payload));
     }
     setTitle('');
     setAuthor('');

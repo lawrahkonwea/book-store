@@ -1,23 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { v4 as uuid4 } from 'uuid';
 
-const initialState = [
-  {
-    title: 'things fall apart',
-    author: 'Chinua Achebe',
-    id: uuid4(),
-  },
-  {
-    title: 'things fall apart',
-    author: 'Chinua Achebe',
-    id: uuid4(),
-  },
-  {
-    title: 'things fall apart',
-    author: 'Chinua Achebe',
-    id: uuid4(),
-  },
-];
+const URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/EDWoMDjjz0qKMAfUSscI/books';
+
+const initialState = [];
 
 const bookSlice = createSlice({
   name: 'books',

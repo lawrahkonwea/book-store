@@ -7,7 +7,7 @@ const ContentBook = ({ book }) => {
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(removeBookAction(book.id));
+    dispatch(removeBookAction(book.item_id));
   };
 
   return (
@@ -18,11 +18,12 @@ const ContentBook = ({ book }) => {
     </li>
   );
 };
+
 ContentBook.propTypes = {
   book: PropTypes.shape({
     title: PropTypes.string,
     author: PropTypes.string,
-    id: PropTypes.string,
+    item_id: PropTypes.string,
   }).isRequired,
 };
 
