@@ -23,10 +23,10 @@
 
 
 
-# 📖<a name="Book Store"></a>
+# 📖<a name="">Book Store</a>
 
 
-**Bookstore is a Single Page App that allows you to:
+Bookstore is a Single Page App that allows you to:
 
 - Display a list of books.
 - Add a book.
