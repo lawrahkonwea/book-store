@@ -7,7 +7,7 @@ const Navigation = () => (
     <nav>
       <div className="cms-links">
         <div>
-          <h1 className="logo">BookStore CMS</h1>
+          <h1 className="logo">BookStore&nbsp;CMS</h1>
         </div>
         <ul className="ul-books">
           <li><Link to="/">BOOKS</Link></li>
