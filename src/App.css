@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto+Slab:wght@200;300;700&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.4;
@@ -12,10 +17,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1% 2% 1% 0;
+  padding: 2% 2% 2% 0;
   background-color: white;
   gap: 60px;
   border-bottom: #d7d8da solid 1px;
+  margin-bottom: 2%;
 }
 
 .cms-links {
@@ -67,8 +73,12 @@ nav {
   align-items: center;
   background-color: white;
   border: #d7d8da  solid 1px;
-  padding: 3% 7% 3% 3%;
-  margin-bottom: 2%;
+  padding: 5% 7% 5% 3%;
+  margin: 0 20px 2% 20px;
+
+  /* padding: 10px 10px 10px 10px ; */
+
+  /* margin-bottom: 2%; */
 }
 
 .book {
@@ -100,6 +110,7 @@ nav {
 .title {
   font-weight: 700;
   color: #121212;
+  margin-bottom: 4%;
   margin-top: 3px;
   font-size: 1.375rem;
   letter-spacing: -0.2px;
@@ -155,7 +166,7 @@ hr {
   font-family: "Montserrat", sans-serif;
   color: #121212;
   font-size: xx-large;
-  margin-right: 100px;
+  margin-right: 160px;
 }
 
 .completed {
@@ -239,10 +250,10 @@ input {
   color: #121212;
 }
 
-input:focus {
+/* input:focus {
   outline: none;
-  border: 1px solid #0290ff;
-}
+ border: 1px solid #0290ff;
+} */
 
 .input-title {
   width: 50%;
@@ -281,4 +292,86 @@ input:focus {
   color: #fff;
   width: 15%;
   margin: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+  }
+
+  .logo {
+    padding: 0;
+  }
+
+  .cms-links {
+    width: 100%;
+  }
+
+  .eachbook {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .add-book {
+    margin-left: 30px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 30px;
+  }
+
+  .input-author {
+    width: 100%;
+  }
+
+  .input-title {
+    width: 100%;
+  }
+
+  .add-btn {
+    width: 100%;
+    align-items: center;
+  }
+
+  .book {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin-right: 70%;
+    margin-bottom: 5%;
+  }
+
+  .completed-circle {
+    margin-bottom: 5%;
+  }
+
+  .t64 {
+    margin-left: 50px;
+  }
+
+  .completed {
+    margin-left: 30px;
+  }
+
+  .book-headers {
+    display: flex;
+  }
+
+  .complete-line {
+    display: none;
+  }
+
+  .details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 30%;
+  }
 }
