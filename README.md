@@ -65,7 +65,7 @@ Bookstore is a Single Page App that allows you to:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- In progress
+- [Live Demo](https://savebookstoreproject.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
